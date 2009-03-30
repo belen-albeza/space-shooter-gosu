@@ -1,21 +1,27 @@
 module Engine
 
-  class SpriteFactory
+  class SpriteCollection
+    
+    attr_reader :sprites
 
     # Constructor
     def initialize
       @sprites = Hash.new
     end
 
-    # Returns the asked sprite list
-    def sprites(class_name)
-      @sprites[class_name]
+    # Adds a new sprite  to its own sprite list
+    def add(obj)
+      init_list(obj.class) unless @sprites[obj.class]
+      @sprites[obj.class].push(obj)
     end
-
-    # Produces a new sprite and adds it to its own sprite list
-    def create(class_name, *args)
-      @sprites[class_name] = Array.new unless @sprites[class_name]
-      @sprites[class_name].push(class_name.new(*args))
+    
+    # Removes a existing sprite from its own list
+    def remove(obj)
+      @sprites[obj.class].delete(obj) if @sprites[obj.class]
+    end
+    
+    def init_list(class_name)
+      @sprites[class_name] = Array.new
     end
 
   end

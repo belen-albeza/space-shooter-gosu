@@ -10,6 +10,8 @@ class Alien < Engine::Sprite
     @image = Engine::Game.images["alien"]
     @x = rand(Engine::Game::ScreenWidth)
     @y = -@image[0].height / 2
+    @z = ZOrder::Alien
+    @radius = 20
     
     @speedx = rand(MaxSpeedX * 2) - MaxSpeedX
     @speedy = rand(MaxSpeedY - MinSpeedY) + MinSpeedY

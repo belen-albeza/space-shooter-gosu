@@ -1,7 +1,15 @@
 require 'rubygems'
 require 'gosu'
 
-require 'game'
+require 'engine'
+require 'zorder'
 
-$game = Game.new
-$game.show
+require 'alien'
+require 'bullet'
+require 'energy_bar'
+require 'hud'
+require 'ship'
+
+
+game = Engine::Game.instance
+game.show

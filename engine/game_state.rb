@@ -16,5 +16,12 @@ module Engine
       raise "This method should be overridden"
     end
     
+    # Gets called when the player releases a button
+    def button_up(id)
+    end
+    
+    # Gets called when the player presses down a button
+    def button_down(id)
+    end
   end
 end
