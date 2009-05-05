@@ -11,10 +11,6 @@ module Engine
       @font_credits = Game.fonts["menu"]
     end
     
-    # Updates the credits screen
-    def update      
-    end
-    
     # Draws the credits screen
     def draw
       @img_background.draw(0, 0, 0)
@@ -31,7 +27,7 @@ module Engine
     # Gets called when the player releases a button
     def button_up(id)
       # go back to the main menu
-      Game.game_state = MenuState if id == Gosu::KbEscape or id == Gosu::KbReturn
+      Game.game_state = MenuState if id == Gosu::KbEscape or id == Gosu::KbReturn or Gosu::KbSpace
     end
   end
 end

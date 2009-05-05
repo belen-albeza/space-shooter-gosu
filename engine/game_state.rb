@@ -1,4 +1,5 @@
 module Engine
+  # This is an abstract class for the different game states (game screens)
   class GameState
     
     # Constructor
@@ -8,7 +9,6 @@ module Engine
     
     # Updates all game entities belonging to this state
     def update
-      raise "This method should be overridden"
     end
     
     # Draws all game entities belonging to this state

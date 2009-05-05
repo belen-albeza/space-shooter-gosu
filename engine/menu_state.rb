@@ -1,5 +1,5 @@
 module Engine
-  
+  # This game state is the main menu screen
   class MenuState < GameState
     
     TextX = Game::ScreenWidth / 2
@@ -39,8 +39,7 @@ module Engine
       case id
       when Gosu::KbDown then next_option!
       when Gosu::KbUp then prev_option!
-      when Gosu::KbReturn then select_option
-      when Gosu::KbSpace then Game.fade_off(1000)
+      when Gosu::KbReturn, Gosu::KbSpace then select_option
       end
     end
     
