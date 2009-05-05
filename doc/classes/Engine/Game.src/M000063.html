@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>load_images (Engine::Game)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File engine/game.rb, line 131</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_images</span>
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;black&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/black.png&quot;</span>, <span class="ruby-keyword kw">true</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;background&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/background.png&quot;</span>, <span class="ruby-keyword kw">true</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;captain&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/captain.png&quot;</span>, <span class="ruby-keyword kw">false</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;laser&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/laser.png&quot;</span>, <span class="ruby-keyword kw">false</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;alien&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">load_tiles</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/alien.png&quot;</span>, <span class="ruby-value">48</span>, <span class="ruby-value">42</span>, <span class="ruby-keyword kw">false</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;energy full&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/energy_full.png&quot;</span>, <span class="ruby-keyword kw">false</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;energy low&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/energy_low.png&quot;</span>, <span class="ruby-keyword kw">false</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;hud&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/hud.png&quot;</span>, <span class="ruby-keyword kw">false</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;boom&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/boom.png&quot;</span>, <span class="ruby-keyword kw">false</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;gameover&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/game_over.png&quot;</span>, <span class="ruby-keyword kw">false</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;logo&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/game_logo.png&quot;</span>, <span class="ruby-keyword kw">false</span>)
+      <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;credits&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;gfx/credits.png&quot;</span>, <span class="ruby-keyword kw">false</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

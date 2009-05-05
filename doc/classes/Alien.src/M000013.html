@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (Alien)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File alien.rb, line 10</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+    <span class="ruby-keyword kw">super</span>
+    
+    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Engine</span><span class="ruby-operator">::</span><span class="ruby-constant">Game</span>.<span class="ruby-identifier">images</span>[<span class="ruby-value str">&quot;alien&quot;</span>]
+    <span class="ruby-ivar">@x</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-constant">Engine</span><span class="ruby-operator">::</span><span class="ruby-constant">Game</span><span class="ruby-operator">::</span><span class="ruby-constant">ScreenWidth</span>)
+    <span class="ruby-ivar">@y</span> = <span class="ruby-operator">-</span><span class="ruby-ivar">@image</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>
+    <span class="ruby-ivar">@z</span> = <span class="ruby-constant">ZOrder</span><span class="ruby-operator">::</span><span class="ruby-constant">Alien</span>
+    <span class="ruby-ivar">@radius</span> = <span class="ruby-value">20</span>
+    
+    <span class="ruby-comment cmt"># assign random speeds to the alien</span>
+    <span class="ruby-ivar">@speedx</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-constant">MaxSpeedX</span> <span class="ruby-operator">*</span> <span class="ruby-value">2</span>) <span class="ruby-operator">-</span> <span class="ruby-constant">MaxSpeedX</span>
+    <span class="ruby-ivar">@speedy</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-constant">MaxSpeedY</span> <span class="ruby-operator">-</span> <span class="ruby-constant">MinSpeedY</span>) <span class="ruby-operator">+</span> <span class="ruby-constant">MinSpeedY</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

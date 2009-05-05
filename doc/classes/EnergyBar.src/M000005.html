@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>draw (EnergyBar)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File energy_bar.rb, line 20</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw</span>
+    <span class="ruby-comment cmt"># draw the &quot;background&quot; translucid energy bar</span>
+    <span class="ruby-keyword kw">super</span>
+    
+    <span class="ruby-ivar">@energy</span> = <span class="ruby-constant">Engine</span><span class="ruby-operator">::</span><span class="ruby-constant">Game</span>.<span class="ruby-identifier">game_state</span>.<span class="ruby-identifier">energy</span>
+    <span class="ruby-comment cmt"># clip the opaque image to draw only the remaining energy</span>
+    <span class="ruby-constant">Engine</span><span class="ruby-operator">::</span><span class="ruby-constant">Game</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">clip_to</span>(<span class="ruby-ivar">@x</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@image</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>, <span class="ruby-ivar">@y</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@image</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>, <span class="ruby-ivar">@energy</span> <span class="ruby-operator">*</span> <span class="ruby-constant">BarWidth</span>, <span class="ruby-ivar">@image</span>.<span class="ruby-identifier">height</span>) <span class="ruby-keyword kw">do</span>
+      <span class="ruby-ivar">@image</span>, <span class="ruby-ivar">@image_full</span> = <span class="ruby-ivar">@image_full</span>, <span class="ruby-ivar">@image</span> <span class="ruby-comment cmt"># swap transparent and opaque images</span>
+      <span class="ruby-keyword kw">super</span> <span class="ruby-comment cmt"># draw the &quot;foreground&quot; opaque var</span>
+    <span class="ruby-keyword kw">end</span>
+    
+    <span class="ruby-ivar">@image</span>, <span class="ruby-ivar">@image_full</span> = <span class="ruby-ivar">@image_full</span>, <span class="ruby-ivar">@image</span> <span class="ruby-comment cmt"># back to normal</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

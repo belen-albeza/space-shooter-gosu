@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (Ship)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File ship.rb, line 10</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+    <span class="ruby-keyword kw">super</span>
+    
+    <span class="ruby-ivar">@x</span> = <span class="ruby-constant">Engine</span><span class="ruby-operator">::</span><span class="ruby-constant">Game</span><span class="ruby-operator">::</span><span class="ruby-constant">ScreenWidth</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>
+    <span class="ruby-ivar">@y</span> = <span class="ruby-constant">Engine</span><span class="ruby-operator">::</span><span class="ruby-constant">Game</span><span class="ruby-operator">::</span><span class="ruby-constant">ScreenHeight</span> <span class="ruby-operator">-</span> <span class="ruby-value">100</span>
+    <span class="ruby-ivar">@z</span> = <span class="ruby-constant">ZOrder</span><span class="ruby-operator">::</span><span class="ruby-constant">Ship</span>
+    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Engine</span><span class="ruby-operator">::</span><span class="ruby-constant">Game</span>.<span class="ruby-identifier">images</span>[<span class="ruby-value str">&quot;captain&quot;</span>]
+    
+    <span class="ruby-ivar">@radius</span> = <span class="ruby-value">30</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

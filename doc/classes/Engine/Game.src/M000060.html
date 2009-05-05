@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>draw (Engine::Game)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File engine/game.rb, line 110</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw</span>
+      <span class="ruby-ivar">@@game_state</span>.<span class="ruby-identifier">draw</span>
+      <span class="ruby-comment cmt"># [0, Gosu::milliseconds / @@end_fade].max</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Game</span>.<span class="ruby-identifier">fading?</span>
+        <span class="ruby-identifier">delta</span> = (<span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-identifier">milliseconds</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@@start_fade</span>).<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> (<span class="ruby-ivar">@@end_fade</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@@start_fade</span>)
+        <span class="ruby-identifier">alpha</span> = <span class="ruby-ivar">@@fading_off</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">delta</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">delta</span>
+        <span class="ruby-ivar">@@img_fade</span>.<span class="ruby-identifier">draw</span>(<span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-constant">ZOrder</span><span class="ruby-operator">::</span><span class="ruby-constant">Fade</span>, <span class="ruby-value">1</span>, <span class="ruby-value">1</span>, <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>((<span class="ruby-identifier">alpha</span> <span class="ruby-operator">*</span> <span class="ruby-value">0xff</span>).<span class="ruby-identifier">to_i</span>, <span class="ruby-value">0xff</span>, <span class="ruby-value">0xff</span>, <span class="ruby-value">0xff</span>))
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

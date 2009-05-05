@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: Engine</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">Engine</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/engine/credits_state_rb.html">
+                engine/credits_state.rb
+                </a>
+        <br />
+                <a href="../files/engine/game_rb.html">
+                engine/game.rb
+                </a>
+        <br />
+                <a href="../files/engine/game_state_rb.html">
+                engine/game_state.rb
+                </a>
+        <br />
+                <a href="../files/engine/menu_state_rb.html">
+                engine/menu_state.rb
+                </a>
+        <br />
+                <a href="../files/engine/play_state_rb.html">
+                engine/play_state.rb
+                </a>
+        <br />
+                <a href="../files/engine/sprite_rb.html">
+                engine/sprite.rb
+                </a>
+        <br />
+                <a href="../files/engine/sprite_collection_rb.html">
+                engine/sprite_collection.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="Engine/CreditsState.html" class="link">Engine::CreditsState</a><br />
+Class <a href="Engine/Game.html" class="link">Engine::Game</a><br />
+Class <a href="Engine/GameState.html" class="link">Engine::GameState</a><br />
+Class <a href="Engine/MenuState.html" class="link">Engine::MenuState</a><br />
+Class <a href="Engine/PlayState.html" class="link">Engine::PlayState</a><br />
+Class <a href="Engine/Sprite.html" class="link">Engine::Sprite</a><br />
+Class <a href="Engine/SpriteCollection.html" class="link">Engine::SpriteCollection</a><br />
+
+    </div>
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

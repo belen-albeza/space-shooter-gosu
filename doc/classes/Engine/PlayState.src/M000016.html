@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (Engine::PlayState)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File engine/play_state.rb, line 8</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+      <span class="ruby-ivar">@game_over</span> = <span class="ruby-keyword kw">false</span> <span class="ruby-comment cmt"># flag</span>
+      
+      <span class="ruby-comment cmt"># init sprite lists</span>
+      [<span class="ruby-constant">Alien</span>, <span class="ruby-constant">Bullet</span>, <span class="ruby-constant">EnergyBar</span>, <span class="ruby-constant">Explosion</span>, <span class="ruby-constant">Hud</span>, <span class="ruby-constant">Ship</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-constant">Game</span>.<span class="ruby-identifier">sprite_collection</span>.<span class="ruby-identifier">init_list</span>(<span class="ruby-identifier">x</span>)}
+      
+      <span class="ruby-ivar">@captain</span> = <span class="ruby-constant">Ship</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-ivar">@img_background</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">images</span>[<span class="ruby-value str">&quot;background&quot;</span>]
+      <span class="ruby-ivar">@font_score</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">fonts</span>[<span class="ruby-value str">&quot;score&quot;</span>]
+      
+      <span class="ruby-constant">Hud</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-constant">EnergyBar</span>.<span class="ruby-identifier">new</span>
+      
+      <span class="ruby-ivar">@score</span> = <span class="ruby-value">0</span>
+      <span class="ruby-ivar">@energy</span> = <span class="ruby-constant">MaxEnergy</span>       
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

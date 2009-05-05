@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>draw (Engine::Sprite)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File engine/sprite.rb, line 35</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@image</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Array</span>
+        <span class="ruby-identifier">img</span> = <span class="ruby-ivar">@image</span>[<span class="ruby-ivar">@index</span>]
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">img</span> = <span class="ruby-ivar">@image</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">img</span>.<span class="ruby-identifier">draw_rot</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>, <span class="ruby-ivar">@z</span>, <span class="ruby-ivar">@angle</span>, <span class="ruby-value">0</span><span class="ruby-value">.5</span>, <span class="ruby-value">0</span><span class="ruby-value">.5</span>, <span class="ruby-ivar">@size</span>, <span class="ruby-ivar">@size</span>, <span class="ruby-identifier">alpha_to_color</span>(<span class="ruby-ivar">@alpha</span>), <span class="ruby-ivar">@blending</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
