@@ -1,1 +1,37 @@
-Simple shooter game that shows how to use the Gosu library to create a game with Ruby. Still in early stages of development, it is worthless to download it right now.
+Simple shooter game that shows how to use the Gosu library to create a game with Ruby. This example game uses a 
+small simple framework which allows the programmer to create and handle custom sprites and game states (ie, game screens such as the main menu, the play screen, etc).
+
+Running
+=======
+
+You'll need the gosu gem:
+$ gem install gosu
+
+Then run the main.rb file:
+$ruby main.rb
+
+How to play
+===========
+
+Menu controls:
+
+* Use the arrow keys (up and down) to browse the different menu options
+* Press Enter or the space bar to select the highlighted option
+* Press Esc to quit the game or go back to the main menu screen 
+
+In game controls:
+
+* Use the arrow keys to move the space ship horizontally.
+* Hit the space bar to shoot
+* Avoid colliding with aliens!
+* Press Esc to go back to the main menu
+
+Credits & copying
+=================
+
+This game is (c) 2009 Belén Albeza González.
+Graphics and source code released under the MIT license. See LICENSE for details.
+
+You can contact me at: benko@ladybenko.net
+
+ 

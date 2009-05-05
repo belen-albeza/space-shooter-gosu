@@ -7,6 +7,7 @@ require 'zorder'
 require 'alien'
 require 'bullet'
 require 'energy_bar'
+require 'explosion'
 require 'hud'
 require 'ship'
 

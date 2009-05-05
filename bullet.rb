@@ -1,6 +1,9 @@
+# These are bullets shot by the player's ship
 class Bullet < Engine::Sprite
   Speed = 8
+  BoomOffset = 10
   
+  # Constructor
   def initialize(x, y)
     super()
     
@@ -11,21 +14,21 @@ class Bullet < Engine::Sprite
     @radius = 8    
   end
   
+  # Updates the bullet
   def update
-    @y -= Speed
+    @y -= Speed # move up
         
-    collide = false
-    
+    collide = false    
     # collisions against aliens
     Engine::Game.sprites[Alien].each do |alien|
       if collision?(alien)
         collide = true
-        alien.kill
+        alien.destroy! # kills the alien
+        Engine::Game.game_state.increase_score!(50) # award the player with some points
       end
     end
     
-    kill if @y <= -@image.height / 2 or collide
-    
+    # destroy the bullet when it reaches the top of the screen or collides with an enemy
+    kill! if @y <= -@image.height / 2 or collide
   end
-  
 end
