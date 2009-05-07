@@ -32,11 +32,7 @@ module Engine
       @font_score.draw_rel(@score.to_s, Game::ScreenWidth - 20, Game::ScreenHeight - 5, ZOrder::Hud + 1, 1.0, 1.0)
       
       # draw all sprites
-      Game.sprites.each_value do |list|
-        list.each do |s|
-          s.draw
-        end
-      end
+      Game.sprite_collection.draw
     end
     
     # Updates game entities
@@ -47,11 +43,7 @@ module Engine
       Alien.new if rand(100) < 10
             
       # update all sprites
-      Game.sprites.each_value do |list|
-        list.each do |s|
-          s.update
-        end
-      end
+      Game.sprite_collection.update
     end
     
     # Gets called when the player releases a button

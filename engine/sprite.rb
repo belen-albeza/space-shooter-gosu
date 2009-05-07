@@ -21,6 +21,8 @@ module Engine
       @index = 0
       @radius = 0
       @size = 1.0
+      
+      @die = false
             
       # Adds this new sprite to its sprite list
       Game.sprite_collection.add(self)   
@@ -43,7 +45,12 @@ module Engine
     
     # Removes the sprite from its sprite list
     def kill!
-      Game.sprite_collection.remove(self)
+      @die = true
+    end
+    
+    # Checks whether this sprite should be deleted this frame or not
+    def die?
+      @die
     end
     
     # Check collision against another sprite (circle-shaped bounding boxes)

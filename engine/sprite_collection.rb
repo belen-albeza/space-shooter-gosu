@@ -29,7 +29,20 @@ module Engine
     def init_list(class_name)
       @sprites[class_name] = Array.new
     end
-
+    
+    # Updates all the sprites in the collection
+    def update
+      @sprites.each_value do |list|
+        list.each {|x| x.update}
+        list.reject!{|x| x.die?} # delete all doomed sprites
+      end
+    end
+    
+    # Draws all the sprites in the collection
+    def draw
+      @sprites.each_value do |list|
+        list.each {|x| x.draw}
+      end
+    end
   end
-
 end

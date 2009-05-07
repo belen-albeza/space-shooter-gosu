@@ -109,7 +109,7 @@ module Engine
     # Draws the game entities on the screen. Gets called automatically by Gosu each frame
     def draw
       @@game_state.draw
-      # [0, Gosu::milliseconds / @@end_fade].max
+
       if Game.fading?
         delta = (Gosu::milliseconds - @@start_fade).to_f / (@@end_fade - @@start_fade)
         alpha = @@fading_off ? delta : 1 - delta
