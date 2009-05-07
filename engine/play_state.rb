@@ -49,7 +49,7 @@ module Engine
     # Gets called when the player releases a button
     def button_up(id)
       case id
-      when Gosu::KbSpace then @captain.shoot # shoot a bullet
+      when Gosu::KbSpace then @captain.shoot if not game_over?# shoot a bullet
       when Gosu::KbEscape then Game.game_state = MenuState
       when Gosu::KbReturn then Game.game_state = MenuState if game_over?
       end
@@ -57,8 +57,8 @@ module Engine
     
     # Check the status of some buttons and performs the appropiate actions
     def process_input
-      @captain.move(-Ship::Speed) if Game.instance.button_down?(Gosu::KbLeft)
-      @captain.move(Ship::Speed) if Game.instance.button_down?(Gosu::KbRight)
+      @captain.move(-Ship::Speed) if Game.instance.button_down?(Gosu::KbLeft) and not game_over?
+      @captain.move(Ship::Speed) if Game.instance.button_down?(Gosu::KbRight) and not game_over?
     end
     
     # Shows the game over message
