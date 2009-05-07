@@ -86,8 +86,7 @@ href="Sprite.html">Sprite</a> objects.
 </p>
 <p>
 In the game, there is one sprite list for each different sprite class, ie
-<a href="../Alien.html">Alien</a>, <a href="../Bullet.html">Bullet</a>, <a
-href="../Ship.html">Ship</a>, etc.
+Alien, <a href="../Bullet.html">Bullet</a>, Ship, etc.
 </p>
 
     </div>
@@ -99,10 +98,12 @@ href="../Ship.html">Ship</a>, etc.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000035">add</a>&nbsp;&nbsp;
-      <a href="#M000037">init_list</a>&nbsp;&nbsp;
-      <a href="#M000034">new</a>&nbsp;&nbsp;
-      <a href="#M000036">remove</a>&nbsp;&nbsp;
+      <a href="#M000021">add</a>&nbsp;&nbsp;
+      <a href="#M000025">draw</a>&nbsp;&nbsp;
+      <a href="#M000023">init_list</a>&nbsp;&nbsp;
+      <a href="#M000020">new</a>&nbsp;&nbsp;
+      <a href="#M000022">remove</a>&nbsp;&nbsp;
+      <a href="#M000024">update</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -137,12 +138,12 @@ href="../Ship.html">Ship</a>, etc.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000034" class="method-detail">
-        <a name="M000034"></a>
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
 
         <div class="method-heading">
-          <a href="SpriteCollection.src/M000034.html" target="Code" class="method-signature"
-            onclick="popupCode('SpriteCollection.src/M000034.html');return false;">
+          <a href="SpriteCollection.src/M000020.html" target="Code" class="method-signature"
+            onclick="popupCode('SpriteCollection.src/M000020.html');return false;">
           <span class="method-name">new</span><span class="method-args">()</span>
           </a>
         </div>
@@ -156,30 +157,47 @@ Constructor
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000035" class="method-detail">
-        <a name="M000035"></a>
+      <div id="method-M000021" class="method-detail">
+        <a name="M000021"></a>
 
         <div class="method-heading">
-          <a href="SpriteCollection.src/M000035.html" target="Code" class="method-signature"
-            onclick="popupCode('SpriteCollection.src/M000035.html');return false;">
+          <a href="SpriteCollection.src/M000021.html" target="Code" class="method-signature"
+            onclick="popupCode('SpriteCollection.src/M000021.html');return false;">
           <span class="method-name">add</span><span class="method-args">(obj)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Adds a <a href="SpriteCollection.html#M000034">new</a> sprite to its own
+Adds a <a href="SpriteCollection.html#M000020">new</a> sprite to its own
 sprite list
 </p>
         </div>
       </div>
 
-      <div id="method-M000037" class="method-detail">
-        <a name="M000037"></a>
+      <div id="method-M000025" class="method-detail">
+        <a name="M000025"></a>
 
         <div class="method-heading">
-          <a href="SpriteCollection.src/M000037.html" target="Code" class="method-signature"
-            onclick="popupCode('SpriteCollection.src/M000037.html');return false;">
+          <a href="SpriteCollection.src/M000025.html" target="Code" class="method-signature"
+            onclick="popupCode('SpriteCollection.src/M000025.html');return false;">
+          <span class="method-name">draw</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draws all the sprites in the collection
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000023" class="method-detail">
+        <a name="M000023"></a>
+
+        <div class="method-heading">
+          <a href="SpriteCollection.src/M000023.html" target="Code" class="method-signature"
+            onclick="popupCode('SpriteCollection.src/M000023.html');return false;">
           <span class="method-name">init_list</span><span class="method-args">(class_name)</span>
           </a>
         </div>
@@ -191,12 +209,12 @@ Initializes a sprite list in the correct hash position
         </div>
       </div>
 
-      <div id="method-M000036" class="method-detail">
-        <a name="M000036"></a>
+      <div id="method-M000022" class="method-detail">
+        <a name="M000022"></a>
 
         <div class="method-heading">
-          <a href="SpriteCollection.src/M000036.html" target="Code" class="method-signature"
-            onclick="popupCode('SpriteCollection.src/M000036.html');return false;">
+          <a href="SpriteCollection.src/M000022.html" target="Code" class="method-signature"
+            onclick="popupCode('SpriteCollection.src/M000022.html');return false;">
           <span class="method-name">remove</span><span class="method-args">(obj)</span>
           </a>
         </div>
@@ -204,6 +222,23 @@ Initializes a sprite list in the correct hash position
         <div class="method-description">
           <p>
 Removes a existing sprite from its own list
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000024" class="method-detail">
+        <a name="M000024"></a>
+
+        <div class="method-heading">
+          <a href="SpriteCollection.src/M000024.html" target="Code" class="method-signature"
+            onclick="popupCode('SpriteCollection.src/M000024.html');return false;">
+          <span class="method-name">update</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Updates all the sprites in the collection
 </p>
         </div>
       </div>

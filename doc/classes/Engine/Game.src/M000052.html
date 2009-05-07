@@ -5,14 +5,16 @@
 
 <html>
 <head>
-  <title>game_state (Engine::Game)</title>
+  <title>load_fonts (Engine::Game)</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
 </head>
 <body class="standalone-code">
-  <pre><span class="ruby-comment cmt"># File engine/game.rb, line 52</span>
-    <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Game</span>.<span class="ruby-identifier">game_state</span>
-      <span class="ruby-ivar">@@game_state</span>
+  <pre><span class="ruby-comment cmt"># File engine/game.rb, line 147</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_fonts</span>
+      <span class="ruby-ivar">@@fonts</span>[<span class="ruby-value str">&quot;menu&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Font</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;Courier&quot;</span>, <span class="ruby-value">40</span>)
+      <span class="ruby-ivar">@@fonts</span>[<span class="ruby-value str">&quot;score&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Font</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;Courier&quot;</span>, <span class="ruby-value">50</span>)
+      <span class="ruby-ivar">@@fonts</span>[<span class="ruby-value str">&quot;small&quot;</span>] = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Font</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;Courier&quot;</span>, <span class="ruby-value">30</span>)
     <span class="ruby-keyword kw">end</span></pre>
 </body>
 </html>

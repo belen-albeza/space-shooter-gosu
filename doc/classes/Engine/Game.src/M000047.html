@@ -5,29 +5,24 @@
 
 <html>
 <head>
-  <title>new (Engine::Game)</title>
+  <title>update (Engine::Game)</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
 </head>
 <body class="standalone-code">
-  <pre><span class="ruby-comment cmt"># File engine/game.rb, line 12</span>
-    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>      
-      <span class="ruby-keyword kw">super</span>(<span class="ruby-constant">ScreenWidth</span>, <span class="ruby-constant">ScreenHeight</span>, <span class="ruby-keyword kw">false</span>)
-      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">caption</span> = <span class="ruby-value str">&quot;Space Shooter&quot;</span>
-      <span class="ruby-ivar">@@sprite_collection</span> = <span class="ruby-constant">SpriteCollection</span>.<span class="ruby-identifier">new</span>
-      <span class="ruby-ivar">@@images</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-      <span class="ruby-ivar">@@fonts</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>      
-      <span class="ruby-identifier">load_images</span>
-      <span class="ruby-identifier">load_fonts</span>
+  <pre><span class="ruby-comment cmt"># File engine/game.rb, line 95</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>
+      <span class="ruby-ivar">@@game_state</span>.<span class="ruby-identifier">update</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">Game</span>.<span class="ruby-identifier">fading?</span>      
       
-      <span class="ruby-ivar">@@img_fade</span> = <span class="ruby-ivar">@@images</span>[<span class="ruby-value str">&quot;black&quot;</span>]
-      <span class="ruby-ivar">@@fading_off</span> = <span class="ruby-keyword kw">false</span>
-      <span class="ruby-ivar">@@fading_on</span> = <span class="ruby-keyword kw">false</span>
-      <span class="ruby-ivar">@@end_fade</span> = <span class="ruby-value">0</span>
-      <span class="ruby-ivar">@@start_fade</span> = <span class="ruby-value">0</span>
-       
-      <span class="ruby-ivar">@@change_game_state</span> = <span class="ruby-keyword kw">nil</span>
-      <span class="ruby-ivar">@@game_state</span> = <span class="ruby-constant">MenuState</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-comment cmt"># update fading</span>
+      <span class="ruby-constant">Game</span>.<span class="ruby-identifier">end_fade!</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-identifier">milliseconds</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@@end_fade</span> <span class="ruby-keyword kw">and</span> <span class="ruby-constant">Game</span>.<span class="ruby-identifier">fading?</span>
+      
+      <span class="ruby-comment cmt">#update changing between game states</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@@change_game_state</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-constant">Game</span>.<span class="ruby-identifier">fading?</span>
+        <span class="ruby-ivar">@@game_state</span> = <span class="ruby-ivar">@@change_game_state</span>
+        <span class="ruby-ivar">@@change_game_state</span> = <span class="ruby-keyword kw">nil</span>
+        <span class="ruby-constant">Game</span>.<span class="ruby-identifier">fade_on</span>(<span class="ruby-constant">FadingTime</span>)
+      <span class="ruby-keyword kw">end</span>
     <span class="ruby-keyword kw">end</span></pre>
 </body>
 </html>

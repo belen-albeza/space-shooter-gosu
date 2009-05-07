@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>process_input (Engine::PlayState)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File engine/play_state.rb, line 59</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">process_input</span>
+      <span class="ruby-ivar">@captain</span>.<span class="ruby-identifier">move</span>(<span class="ruby-operator">-</span><span class="ruby-constant">Ship</span><span class="ruby-operator">::</span><span class="ruby-constant">Speed</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Game</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">button_down?</span>(<span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbLeft</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">game_over?</span>
+      <span class="ruby-ivar">@captain</span>.<span class="ruby-identifier">move</span>(<span class="ruby-constant">Ship</span><span class="ruby-operator">::</span><span class="ruby-constant">Speed</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Game</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">button_down?</span>(<span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbRight</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">game_over?</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

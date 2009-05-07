@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>draw (Engine::PlayState)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File engine/play_state.rb, line 26</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw</span>
+      <span class="ruby-comment cmt"># draw the background</span>
+      <span class="ruby-ivar">@img_background</span>.<span class="ruby-identifier">draw</span>(<span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>)
+      <span class="ruby-ivar">@img_game_over</span>.<span class="ruby-identifier">draw_rot</span>(<span class="ruby-constant">Game</span><span class="ruby-operator">::</span><span class="ruby-constant">ScreenWidth</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>, <span class="ruby-constant">Game</span><span class="ruby-operator">::</span><span class="ruby-constant">ScreenHeight</span><span class="ruby-operator">/</span><span class="ruby-value">3</span>, <span class="ruby-constant">ZOrder</span><span class="ruby-operator">::</span><span class="ruby-constant">Hud</span>, <span class="ruby-value">0</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">game_over?</span>
+      
+      <span class="ruby-comment cmt"># draw the score</span>
+      <span class="ruby-ivar">@font_score</span>.<span class="ruby-identifier">draw_rel</span>(<span class="ruby-ivar">@score</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-constant">Game</span><span class="ruby-operator">::</span><span class="ruby-constant">ScreenWidth</span> <span class="ruby-operator">-</span> <span class="ruby-value">20</span>, <span class="ruby-constant">Game</span><span class="ruby-operator">::</span><span class="ruby-constant">ScreenHeight</span> <span class="ruby-operator">-</span> <span class="ruby-value">5</span>, <span class="ruby-constant">ZOrder</span><span class="ruby-operator">::</span><span class="ruby-constant">Hud</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1.0</span>, <span class="ruby-value">1.0</span>)
+      
+      <span class="ruby-comment cmt"># draw all sprites</span>
+      <span class="ruby-constant">Game</span>.<span class="ruby-identifier">sprite_collection</span>.<span class="ruby-identifier">draw</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
