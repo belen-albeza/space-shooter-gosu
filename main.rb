@@ -1,15 +1,15 @@
 require 'rubygems'
 require 'gosu'
 
-require 'engine'
-require 'zorder'
+require_relative 'engine'
+require_relative 'zorder'
 
-require 'alien'
-require 'bullet'
-require 'energy_bar'
-require 'explosion'
-require 'hud'
-require 'ship'
+require_relative 'alien'
+require_relative 'bullet'
+require_relative 'energy_bar'
+require_relative 'explosion'
+require_relative 'hud'
+require_relative 'ship'
 
 
 game = Engine::Game.instance
